@@ -39,7 +39,7 @@ namespace ServitiaTest_Backend_Api.Controllers
             }
         }
         [HttpGet]
-        public async Task<ActionResult<Message>> GetUnreadMessage(string recipient)
+        public async Task<ActionResult<int>> GetUnreadMessage(string recipient)
         {
             var query = new GetNumberOfUnreadMessageByUserQuery(recipient);
             try
